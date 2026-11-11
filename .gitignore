@@ -1,0 +1,30 @@
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Downloaded datasets and prepared client data
+/components/data/
+/components/pool/
+
+# Experiment outputs
+/results/
+*.log
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Local virtual environments and configuration
+/.venv/
+/venv/
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
