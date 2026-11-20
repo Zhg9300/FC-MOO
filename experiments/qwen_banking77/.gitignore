@@ -1,0 +1,27 @@
+# Python and local tools
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/.venv*/
+
+# Downloaded assets and caches
+/Qwen2.5-3B-Instruct/
+/data/raw/
+/data/prepared/
+/hf_cache/
+.cache/
+
+# Local run outputs and build artifacts
+/outputs/
+/reports/
+/wheels/
+checkpoint/
+checkpoint-*/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.log
+*.whl
+*.tar.gz
+*.tar.gz.sha256

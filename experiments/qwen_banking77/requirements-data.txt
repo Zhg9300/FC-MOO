@@ -1,0 +1,2 @@
+# CPU-only Banking77 data preparation.
+numpy==1.26.4

@@ -1,0 +1,53 @@
+method: fcmoo
+partition: dirichlet_alpha_0.1
+seed: 2026
+smoke_test: false
+
+model:
+  model_path: Qwen2.5-3B-Instruct
+  num_labels: 77
+  max_length: 128
+  lora_r: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  target_modules: [q_proj, v_proj]
+  gradient_checkpointing: false
+  head_init_scale: 0.1
+
+data:
+  raw_dir: data/raw/banking77
+  prepared_root: data/prepared/banking77
+  seed: 2026
+
+training:
+  device: npu:0
+  rounds: 500
+  batch_size: 32
+  micro_batch_size: 32
+  eval_batch_size: 32
+  lr: 0.003
+  lr_power: 0.0
+  lr_offset: 10
+  eval_every: 50
+  checkpoint_every: 50
+  eval_max_samples_per_client: null
+  evaluate_initial: true
+  evaluation_splits: [train, validation]
+  periodic_eval_splits: [train, validation]
+  dynamic_padding: true
+
+algorithms:
+  # FedAvg has no method-specific parameters.
+  q: 0.1                # qFFL
+  epsilon: 0.1          # FedMGDA+
+  fairmoo_prefer: 0.01  # FairMOO switching threshold
+  # FC-MOO fairness constraint and tracker.
+  delta: 0.001
+  rho: 3.0
+  mu_cap: 1000.0
+  tracking_beta: 0.2
+  tracking_power: 0.0
+  tracking_offset: 10
+  # Shared quadratic program solver settings.
+  qp_tol: 1.0e-08
+  qp_max_iter: 1000
