@@ -1,0 +1,7 @@
+# Install PyTorch and, for Ascend NPU, torch_npu separately for your device.
+numpy==1.26.4
+transformers==4.41.2
+peft==0.11.1
+accelerate==0.30.1
+safetensors==0.4.3
+PyYAML==6.0.2

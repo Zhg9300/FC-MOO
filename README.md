@@ -2,6 +2,11 @@
 
 A federated learning research framework for fairness-constrained multi-objective optimization and comparisons with existing federated learning methods.
 
+## Experiments
+
+- **Image classification** (FashionMNIST, CIFAR-10, CIFAR-100): see Quick Start below.
+- **Federated intent classification** (Qwen2.5-3B-Instruct, Banking77): see the [Qwen / Banking77 experiments](experiments/qwen_banking77/README.md).
+
 ## Requirements
 
 ```text
