@@ -43,7 +43,7 @@ python run.py --help
 **Algorithms:** `FC-MOO`, `FC-MOO-sto`, `FairMOO`, `FedAvg`, `qFedAvg`, `AFL`,
 `DRFL`, `FedMGDA_plus`, `FedMDFG`, `FedLF`, and `AdaFed`.
 
-**Models:** `CNN`, `MLP`, `ResNet18`, `ResNet50`, and `ResNet152`.
+**Models:** `CNN`, `MLP`, `ResNet18`, `ResNet50`.
 Use MLP for FashionMNIST and CNN or ResNet for CIFAR-10/100.
 ResNet models accept `--pretrained True` for ImageNet initialization.
 
