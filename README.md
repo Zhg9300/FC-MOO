@@ -64,9 +64,3 @@ ResNet models accept `--pretrained True` for ImageNet initialization.
 | `--momentum`, `--sgd_step` | SGD momentum and single-step local training |
 | `--NC`, `--Diralpha` | Classes per client and Dirichlet concentration |
 | `--test_interval` | Evaluation interval in communication rounds |
-
-## Outputs
-
-Results are written to `results/<data-loader-nickname>/<model>/<algorithm>/`.
-Each experiment produces a JSON file with run metadata and a text log containing
-client test accuracies, their mean/variance/minimum/maximum, and mean test loss.
